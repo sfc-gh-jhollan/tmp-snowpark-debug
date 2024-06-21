@@ -17,8 +17,8 @@ def register_procedures(session: Session) -> str:
 
 
 if __name__ == "__main__":
-    session = Session.builder.create()
-    session.use_database("ML_EXAMPLE_PROJECT")
+    session = Session.builder.config("connection_name", "pm").getOrCreate()
+    session.use_database("JEFFHOLLAN_DEMO")
     session.use_schema("COMMON")
     print(register_procedures(session))
     raise SystemExit()

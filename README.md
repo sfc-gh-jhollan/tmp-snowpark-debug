@@ -47,7 +47,7 @@ Training time 39.89064002037048 secs.
 - From worksheet run following command
   
 ```
-CALL ML_EXAMPLE_PROJECT.COMMON.TRAIN_PROPHET_MODEL()
+CALL JEFFHOLLAN_DEMO.COMMON.TRAIN_PROPHET_MODEL()
 ```
 
 This should give you a output like

@@ -1,15 +1,14 @@
 import pandas as pd
 from snowflake.snowpark import Session
 
-session = Session.builder.getOrCreate()
-session.sql("CREATE DATABASE IF NOT EXISTS ML_EXAMPLE_PROJECT").collect()
-session.use_database("ML_EXAMPLE_PROJECT")
+session = Session.builder.config("connection_name", "pm").getOrCreate()
+session.use_database("JEFFHOLLAN_DEMO")
 session.sql("CREATE SCHEMA IF NOT EXISTS COMMON").collect()
 session.sql("CREATE SCHEMA IF NOT EXISTS DATA").collect()
 session.sql("CREATE SCHEMA IF NOT EXISTS MODELS").collect()
 session.sql("CREATE STAGE IF NOT EXISTS COMMON.PYTHON_CODE").collect()
 
-session.use_database("ML_EXAMPLE_PROJECT")
+session.use_database("JEFFHOLLAN_DEMO")
 session.use_schema("DATA")
 # Load data from CSV file
 csv_file_path = "data/PJME_hourly.csv"  # Update this with your CSV file path

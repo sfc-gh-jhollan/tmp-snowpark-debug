@@ -6,7 +6,7 @@ SNOWFLAKE_CONN = {
     "role": os.getenv("SF_ROLE", "DEFAULT_ROLE"),
     "password": os.getenv("PASSWORD", "DEFAULT_PASSWORD"),
     "database": os.getenv(
-        "SF_DATABASE", "ML_EXAMPLE_PROJECT"
+        "SF_DATABASE", "JEFFHOLLAN_DEMO"
     ),  # If possible keep this same otherwise refactor the code accordingly
     "schema": os.getenv(
         "SF_SCHEMA", "MODELS"

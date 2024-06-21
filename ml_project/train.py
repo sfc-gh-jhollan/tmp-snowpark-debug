@@ -254,7 +254,7 @@ def main(session: Session) -> str:
 
 # This method will be used for local development environment of stored procedure
 if __name__ == "__main__":
-    with Session.builder.configs(SNOWFLAKE_CONN).getOrCreate() as session:
+    with Session.builder.config("connection_name", "pm").getOrCreate() as session:
         # Print the current snowflake connection information
         log_snowflake_connection_info(session=session)
         output = main(session=session)
