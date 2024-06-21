@@ -1,0 +1,20 @@
+name: tmp-snowpark-debug
+channels:
+  - https://repo.anaconda.com/pkgs/snowflake
+dependencies:
+  - python=3.10
+  - snowflake-snowpark-python
+  - prophet
+  - pip
+  - pip:
+      # Snowflake
+      - snowflake-cli-labs
+      - snowflake-ml-python==1.5.3
+      # Basics
+      - pandas
+      - numpy
+      # ML
+      - scikit-learn
+      # Visualization
+      - seaborn
+      - matplotlib

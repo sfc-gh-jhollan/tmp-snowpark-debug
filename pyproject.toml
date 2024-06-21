@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ml_project"
+description = "A Snowpark ML project."
+version = "0.1.0"
+readme = "README.md"
+dependencies = [
+    "snowflake-snowpark-python",
+    "numpy",
+    "scikit-learn",
+    "snowflake-ml-python",
+    "prophet"
+]
+
+[tool.setuptools.packages.find]
+include = ["ml_project"]
+
+[project.optional-dependencies]
+dev = ["nbqa[toolchain]", "jupyter"]

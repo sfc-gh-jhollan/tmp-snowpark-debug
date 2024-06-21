@@ -1,0 +1,10 @@
+snowflake-snowpark-python
+prophet
+snowflake-ml-python==1.5.3
+snowflake-cli-labs
+
+
+
+
+
+
